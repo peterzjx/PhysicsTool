@@ -11,3 +11,5 @@ Support Options:
     PlotStyle
     MaxRecursion (default = 3)
     PlotPoints (default = 9)
+    Reference (default = 0)
+        When output of the function is a d-dimension vector, specify which dimension is used to determine the recursion depth. Setting this to 0 in the vector case will cause a significant delay as each point will be calculated d times.
