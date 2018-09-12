@@ -1,6 +1,15 @@
 (* ::Package:: *)
 
-BeginPackage["Tool`"]
+BeginPackage["Tool`",{"ErrorBarPlots`"}]
+
+AverageListPlot[{x_,data_},arg___]:=Module[{y=Mean[data],dy=StandardDeviation[data]/Sqrt[Length[data]]},
+ErrorListPlot[Transpose@{Transpose@{x,y},ErrorBar/@dy},arg]
+]
+
+CleanData[data_]:=Module[{func},
+func=Compile[{},data];
+Return[func[]];
+]
 
 
 Dprint[something___]:=If[debug==True,Print[something]];
