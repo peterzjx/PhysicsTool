@@ -1,6 +1,12 @@
 # PhysicsTool
 Mathematica Tool Package
 
+## AverageListPlot
+Display a nested list of {{x1, x2, x3...}, {{y1, y2, y3 ...}, {y1, y2, y3 ...} ...}} as the statistic mean and error of all y's. Accept options for ErrorListPlot.
+
+## CleanData
+If a numerical matrix is generated through complicated pattern replacing (i.e. ArrayFlatten, ReplaceAll), the matrix performance could sometimes be very bad. Use this function to force a clean copy of structured data.
+
 ## DistributeX
 Make a nested list of {{x1, {y1, z1, w1}}, {x2, {y2, z2, w2} ...}} ListLinePlot-able.
 
