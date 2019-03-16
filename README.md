@@ -1,8 +1,20 @@
 # PhysicsTool
 Mathematica Tool Package
 
-## AverageListPlot
-Display a nested list of {{x1, x2, x3...}, {{y1, y2, y3 ...}, {y1, y2, y3 ...} ...}} as the statistic mean and error of all y's. Accept options for ErrorListPlot.
+## tickFormat[xmin, xmax, digits, divisions:10]
+Return a tickFormat used in Ticks or FrameTicks
+
+## MultiplePublishPlot
+Accept a matrix with each element being a subplot. Automatically generate epilog caption (a, b...) within the subplot.
+Support options: EpilogPosition, Color(a list of colors, e.g. ColorData[#, "ColorList"]) , Legend (same options as LineLegend) 
+
+## NumericMatrixQ[mx]
+Return True iff all elements of the matrix are numeric
+
+## AveragePlot
+Display a nested list of {vec_x, data} = {{x1, x2, x3...}, {{y1, y2, y3 ...}, {y1, y2, y3 ...} ...}} as the statistic mean and error of all y's. Accept options for ErrorListPlot.
+
+data should have dimensions (number of configurations * len(x)) or (number of curves * number of configurations * len(x))
 
 ## CleanData
 If a numerical matrix is generated through complicated pattern replacing (i.e. ArrayFlatten, ReplaceAll), the matrix performance could sometimes be very bad. Use this function to force a clean copy of structured data.
